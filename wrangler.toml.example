@@ -1,0 +1,12 @@
+name = "supabase-keepalive"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Create a KV namespace and paste its ID here
+kv_namespaces = [
+  { binding = "PROJECTS_KV", id = "YOUR_KV_NAMESPACE_ID" }
+]
+
+# Daily keepalive at 09:00 UTC
+[triggers]
+crons = ["0 9 * * *"]
